@@ -1,0 +1,198 @@
+/* styles.css */
+
+/* Tipografía general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#download-button {
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 40vh;
+    background: url('../img/hero-background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: rgb(235, 228, 228);
+}
+
+.hero-text h1 {
+    line-height: 0.5;
+}
+
+.hero-text p {
+    line-height: 0.5;
+}
+
+/* Servicios */
+.services-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.service {
+    margin: 5px;
+    display: inline-block;
+}
+
+.service img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el contenedor de imágenes */
+/* Estilos para el contenedor de imágenes */
+.images-row {
+    display: flex;
+    justify-content: space-between; /* Espacio entre tarjetas */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    position: relative;
+    width: 30%; /* Ancho de cada tarjeta */
+    max-width: 350px; /* Aumento del ancho máximo */
+    height: 250px; /* Altura fija para tarjetas */
+    overflow: hidden; /* Oculta contenido que desborda */
+    border: 2px solid #007BFF; /* Borde de la tarjeta en azul */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efectos de transformación */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.card:hover {
+    transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilos para la imagen */
+.card img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Ajusta la imagen para cubrir la tarjeta */
+    transition: transform 0.3s; /* Efecto de transición para la imagen */
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.card:hover img {
+    transform: scale(1.1); /* Aumenta la imagen ligeramente al hacer hover */
+}
+
+/* Estilos para la descripción */
+.description {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 0; /* Se alinea al fondo de la tarjeta */
+    left: 0; /* Se alinea a la izquierda */
+    right: 0; /* Se alinea a la derecha */
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Relleno interno */
+    transform: translateY(100%); /* Inicialmente oculta */
+    transition: transform 0.3s; /* Efecto de transición */
+}
+
+/* Mostrar descripción al pasar el mouse sobre la tarjeta */
+.card:hover .description {
+    transform: translateY(0); /* Mostrar la descripción */
+}
+/* Estilos para la sección de presentación */
+.presentation-section {
+    padding: 10px; /* Espaciado interno */
+    background-color: #f7f2f2; /* Fondo claro */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.presentation-section h2 {
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.presentation-section p {
+    font-size: 16px; /* Tamaño de fuente del texto */
+    line-height: 1.5; /* Altura de línea */
+    margin-bottom: 10px; /* Margen inferior */
+}
+/* Efecto de gradiente animado en el título */
+.gradient-title {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff6b6b, #fddb92, #1e90ff, #9b59b6);
+    background-size: 300%;
+    
+    background-clip: text;                /* Propiedad estándar */
+    -webkit-background-clip: text;        /* Prefijo para compatibilidad con WebKit */
+    
+    -webkit-text-fill-color: transparent; /* Solo prefijo necesario para WebKit */
+
+    animation: gradientTransition 5s ease-in-out infinite;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Definir la animación de gradiente */
+@keyframes gradientTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

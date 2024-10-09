@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+nav {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero-section {
+    background-image: url('/img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.services-section {
+    padding: 50px;
+}
+
+.gradient-title {
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    -webkit-background-clip: text; /* Para navegadores WebKit */
+    background-clip: text; /* Para compatibilidad con navegadores que no usan prefijos */
+    -webkit-text-fill-color: transparent; /* Mantener para el soporte de WebKit */
+}
+
+
+
+.service {
+    margin-bottom: 40px;
+}
+
+.images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Ajustado para tres columnas */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    padding: 15px;
+}
+
+.contact-section {
+    padding: 50px;
+    background-color: #ecf0f1;
+}
+
+footer {
+    background-color: #34495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .images-row {
+        flex-direction: column; /* Apila tarjetas una encima de la otra */
+    }
+
+    .card {
+        width: 90%; /* Ancho completo en pantallas pequeñas */
+        margin: 10px auto; /* Centrar */
+    }
+}
